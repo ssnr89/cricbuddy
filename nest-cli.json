@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/cricbuddy/src",
+  "monorepo": true,
+  "root": "apps/cricbuddy",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/cricbuddy/tsconfig.app.json"
+  },
+  "projects": {
+    "cricbuddy": {
+      "type": "application",
+      "root": "apps/cricbuddy",
+      "entryFile": "main",
+      "sourceRoot": "apps/cricbuddy/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cricbuddy/tsconfig.app.json"
+      }
+    },
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    }
+  }
+}
