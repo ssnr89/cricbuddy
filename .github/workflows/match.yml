@@ -1,10 +1,10 @@
-name: Deploy api gateway to Amazon ECS
+name: Deploy match microservice to Amazon ECS
 
 on:
   push:
     branches: [ "master" ]
     paths:
-      - apps/api-gateway/**
+      - apps/match/**
 
 permissions:
   contents: read
@@ -25,4 +25,4 @@ jobs:
         # Build a docker container and
         # push it to ECR so that it can
         # be deployed to ECS.
-        docker build -t api-gateway -f docker/Api-Gateway.Dockerfile .
+        docker build -t match -f docker/Match.Dockerfile .
