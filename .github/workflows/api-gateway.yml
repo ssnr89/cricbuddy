@@ -3,12 +3,14 @@ name: Deploy api gateway to Amazon ECS
 on:
   push:
     branches: [ "master" ]
+    paths:
+      - apps/api-gateway/**
 
 permissions:
   contents: read
 
 jobs:
-  deploy:
+  build:
     name: Deploy
     runs-on: ubuntu-latest
     environment: production
